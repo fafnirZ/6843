@@ -8,6 +8,7 @@ card.quoccabank.com
 account.quoccabank.com 
 mobile.quoccabank.com *
 www-dev.quoccabank.com * 
+dev.quoccabank.com *
 test.quoccabank.com *
 master.prod.quoccabank.com
 super-secret.admin.quoccabank.com *
