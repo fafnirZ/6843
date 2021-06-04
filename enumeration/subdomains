@@ -1,0 +1,21 @@
+adserver.quoccabank.com *
+docs.quoccabank.com
+m.quoccabank.com * 
+m.staging.quoccabank.com *
+support.quoccabank.com
+profile.quoccabank.com
+card.quoccabank.com
+account.quoccabank.com 
+mobile.quoccabank.com *
+www-dev.quoccabank.com * 
+test.quoccabank.com *
+master.prod.quoccabank.com
+super-secret.admin.quoccabank.com *
+vault42.sandbox.quoccabank.com *
+vault42.quoccabank.com *
+v[1-4].feedier.quoccabank.com
+
+way-back flags
+https://www.quoccabank.com/_static/scripts/devsite-dev.js
+https://foobar-recruit.quoccabank.com/
+
