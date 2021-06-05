@@ -1,16 +1,49 @@
-====active recon====
+#in chronological order
+
+====scripts====
+wildcard check script
+crt.sh scrape script
+amass -> passively ran
+
+
+===active recon====
+
 
 dnsrecon > quick scan
 pentesttools
 dnsdumpster 
-crt.sh
 wayback machine
 
+===manual searching===
 shodan & cencys
 google & bing
 
+add to a manual list
+
+
+
 
 ====passive recon====
-amass
+amass -> large scale dns scanner ran in back
+commands:
+	-
+
+massdns -> check which dns are alive
+commands: 
+	-
+
 
 massscan -> nmap alternative/port scanner but faster
+commands: 
+	-
+
+
+
+====compile massive list and parse and sort uniquely=====
+
+
+
+
+====post====
+aquatone
+
