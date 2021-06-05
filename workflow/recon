@@ -26,12 +26,11 @@ add to a manual list
 ====passive recon====
 amass -> large scale dns scanner ran in back
 commands:
-	amass -src -ip -active -brute -d <domain>
 
 
 massdns -> check which dns are alive
 commands: 
-	-
+	- massdns -r resolvers.txt -t A -o S -w massdns.out hosts-inscope.txt
 
 
 massscan -> nmap alternative/port scanner but faster
