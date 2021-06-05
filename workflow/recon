@@ -1,0 +1,16 @@
+====active recon====
+
+dnsrecon > quick scan
+pentesttools
+dnsdumpster 
+crt.sh
+wayback machine
+
+shodan & cencys
+google & bing
+
+
+====passive recon====
+amass
+
+massscan -> nmap alternative/port scanner but faster
