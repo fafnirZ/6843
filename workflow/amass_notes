@@ -1,0 +1,42 @@
+specify config file
+for api keys
+amass enum -d <domain> -config <pathtoconfig>
+
+amass intel
+-reverse whois
+finds other domains with similar whois records
+basically finds root domains that may be owned by an organisation
+amass intel -d <domain> -whois
+
+-ssl cert grabbing
+if feed ip add and give -active flag
+pulls ssl cert from every ip addr within ip range and spit back the doma in of ssl cert associated with it
+amass intel -active -cidr <ipaddr>/24
+
+-asn
+finding asn associated with company (autonomous system number)
+group of IP prefixes with clearly defined external routing policy
+amass intel -org "<companyname>"
+
+
+amass enum
+-basic
+amass enum -d <domain>
+
+-more subdomain options
+using the CIDRs and ASNs associated with the organisation
+amass enum -d <domain> -active -cidr <1.2.3.4/24,4.3.2.1/24 -asn 12345
+
+
+amass tracking
+amass scans auto stored on computer and if u run same scan again, will track any changes that has taken place
+focus on fresher targets most likely to be vulnerable
+
+amass viz
+visualise graphs
+
+amass db
+
+
+
+
