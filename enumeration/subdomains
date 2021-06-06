@@ -14,6 +14,7 @@ master.prod.quoccabank.com
 super-secret.admin.quoccabank.com *
 vault42.sandbox.quoccabank.com *
 vault42.quoccabank.com *
+www-cdn.quoccabank.com *
 v[1-4].feedier.quoccabank.com
 
 way-back flags
