@@ -1,0 +1,3 @@
+cat amass_prog | cut -d']' -f2 | sed 's/^\s*//' | cut -d' ' -f1 > amass_temp_host
+massdns -r ~/6843/workflow/resolvers.txt -t A -o S -w massdns.out amass_temp_host
+
