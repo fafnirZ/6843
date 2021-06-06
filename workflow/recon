@@ -26,6 +26,7 @@ add to a manual list
 ====passive recon====
 amass -> large scale dns scanner ran in back
 commands:
+	- amass enum -d <domain> | tee <temp out file> 
 
 
 massdns -> check which dns are alive
