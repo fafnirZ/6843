@@ -14,7 +14,16 @@ def crawl(path):
     print(f'path=${path}')
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
-        #print(len(soup.find_all('a')))
+        
+        '''
+        content
+        '''
+        #print(response.content.decode('utf-8'))
+        try:
+            match = re.search(r'COMP6443', response.content.decode('utf-8'))
+            print(match.string)
+        except:
+            pass
         links = [ path + re.sub(r'^\.', '', x['href']) for x in soup.find_all('a')]
         #print(links)
 
