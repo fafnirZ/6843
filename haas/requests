@@ -7,3 +7,18 @@ host: kb.quoccabank.com
 
 GET /7643dc3d-2262-4f1c-8fb9-197860946a66.html HTTP/1.1
 host: kb.quoccabank.com
+
+
+
+POST /calculator/ HTTP/1.1
+Host: kb.quoccabank.com
+Content-Length: 9
+Origin: haas.quoccabank.com
+Content-Type: application/x-www-form-urlencoded
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Referer: haas.quoccabank.com
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Connection: close
+
+answer=83
