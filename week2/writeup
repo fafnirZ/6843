@@ -17,3 +17,8 @@ but gave me the information that the server is a Apache/2.4.38(debian) server se
 flag-1
 this flag was obtained by inspecting elements with chrome dev-tools
 
+flag-2
+upon further inspecting of the flag i realised that the website sources a lot of images from the path blog.quoccabank/wp-includes/ which indicated that there might be a hidden wp-admin/ path that could be explored (especially since this is an access authorisation challenge)
+and obviously i tried the password admin admin and it worked.
+
+
