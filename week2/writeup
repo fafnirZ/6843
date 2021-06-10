@@ -1,0 +1,11 @@
+sales.quoccabank.com
+this problem was solved by inspector in burpsuite, which automatically decoded base64 encoded headers in the http request when i closely examined the requests
+
+
+blog.quoccabank.com
+I brute force enumerated the attatchment_ids in the url, obtaining 12/100 successful web-pages
+1 more than the said amount
+
+
+flag-1
+this flag was obtained by inspecting elements with chrome dev-tools
