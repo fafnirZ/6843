@@ -7,19 +7,18 @@ import re
 
 
 
+    
 
-def get():
-    path="calculator/"
-    cert= ('/home/fafnir/cert/6843.pem', '/home/fafnir/cert/6843.key');
-
-
+def get(depth, response):
+    '''
     url='https://haas.quoccabank.com'
+    path = "calculator/"
     payload = 'GET /'+path+' HTTP/1.1\nhost: kb.quoccabank.com'
     obj = {'request': payload}
     obj= urllib.parse.urlencode(obj)
     response = requests.post(url, params=obj, cert=cert)
+    '''
     soup = BeautifulSoup(response.content, 'html.parser')
-    #print(soup.prettify())
 
     #set cookie
     cookie = ""
@@ -28,7 +27,7 @@ def get():
         cookie = cookie_res.group(0)[:-1]
     except:
         print('err has occurred')
-    
+
     #arithmetics
     arith = ""
     arith_res = re.search('What is ([0-9]*\+[0-9]*)', response.text)
@@ -37,12 +36,17 @@ def get():
     answer = str(eval(arith))
 
     content_length = str(7+len(answer))
-    
-    post(content_length, cookie, answer)
-    
 
-
+    response = post(content_length, cookie, answer)
     
+    #print(f'arith = {arith}')
+    #print(f'answer = {answer}')
+    print(response.text)
+    if depth == 20:
+        print(response)
+        return 
+    else:
+        get(depth+1, response)
 
 
 def post(content_length, cookie, answer):
@@ -56,9 +60,45 @@ def post(content_length, cookie, answer):
     obj = {'request': payload}
     obj= urllib.parse.urlencode(obj)
     response = requests.post(url, params=obj, cert=cert)
-    soup = BeautifulSoup(response.content, 'html.parser')
-    print(soup.prettify())
+
+    print(response.text)
+    return response
 
 
-get()
+'''
+initial
+'''
 
+
+path="calculator/"
+cert= ('/home/fafnir/cert/6843.pem', '/home/fafnir/cert/6843.key');
+
+
+url='https://haas.quoccabank.com'
+payload = 'GET /'+path+' HTTP/1.1\nhost: kb.quoccabank.com'
+obj = {'request': payload}
+obj= urllib.parse.urlencode(obj)
+response = requests.post(url, params=obj, cert=cert)
+soup = BeautifulSoup(response.content, 'html.parser')
+#print(soup.prettify())
+
+#set cookie
+cookie = ""
+cookie_res = re.search('calc=.+;', response.text)
+try:
+    cookie = cookie_res.group(0)[:-1]
+except:
+    print('err has occurred')
+
+#arithmetics
+arith = ""
+arith_res = re.search('What is ([0-9]*\+[0-9]*)', response.text)
+arith = arith_res.group(1)
+
+answer = str(eval(arith))
+
+content_length = str(7+len(answer))
+
+response = post(content_length, cookie, answer)
+
+get(0, response)
