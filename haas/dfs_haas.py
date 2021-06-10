@@ -12,11 +12,18 @@ def crawl_dfs(path):
     soup = BeautifulSoup(response.content, 'html.parser')
     path = path[:-1]
 
+    #print(response.text)
+
     for link in soup.find_all('a'):
         link = link['href'][1:]
-        child = path+link
-        print(child)
-        crawl_dfs(child)
+        child = "/deep"+link
+        if(child not in ht):
+            ht[child] = 1
+            crawl_dfs(path)
+        else:
+            continue
+
+    return 
 '''
 initialisation
 '''
@@ -28,6 +35,7 @@ obj = {'request': payload}
 obj= urllib.parse.urlencode(obj)
 response = requests.post(url, params=obj, cert=cert)
 soup = BeautifulSoup(response.content, 'html.parser')
+ht = {}
 
 #initial question for deep
 deep= soup.find_all('a')[1]
