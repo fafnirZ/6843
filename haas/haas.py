@@ -11,7 +11,9 @@ def crawl(path):
     response = requests.post(url, params=obj, cert=cert)
 
     path=path[:len(path)-1]
-    print(f'path=${path}')
+    #print(f'path=${path}')
+
+    print(response.text)
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
         
