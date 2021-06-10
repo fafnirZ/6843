@@ -3,9 +3,17 @@ this problem was solved by inspector in burpsuite, which automatically decoded b
 
 
 blog.quoccabank.com
+
+recon
+
 I brute force enumerated the attatchment_ids in the url, obtaining 12/100 successful web-pages
 1 more than the said amount
+
+accessing .hta gave a forbidden page
+but gave me the information that the server is a Apache/2.4.38(debian) server served on port 80
+
 
 
 flag-1
 this flag was obtained by inspecting elements with chrome dev-tools
+
