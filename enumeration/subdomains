@@ -1,19 +1,25 @@
 adserver.quoccabank.com *
+
 m.quoccabank.com * 
 m.staging.quoccabank.com *
 mobile.quoccabank.com *
-www-dev.quoccabank.com * 
+
 dev.quoccabank.com *
 test.quoccabank.com *
-master.prod.quoccabank.com
+
 super-secret.admin.quoccabank.com *
 vault42.sandbox.quoccabank.com *
 vault42.quoccabank.com *
-www-cdn.quoccabank.com *
+
 www-staging.quoccabank.com *
+www-preprod.quoccabank.com *
+www-cdn.quoccabank.com *
+www-cdn-au.quoccabank.com *
+www-cdn-hk.quoccabank.com *
+www-dev.quoccabank.com * 
 
-
-
+https://www.quoccabank.com/_static/scripts/devsite-dev.js *
+https://foobar-recruit.quoccabank.com/ *
 
 
 fails
@@ -23,6 +29,7 @@ profile.quoccabank.com
 card.quoccabank.com
 account.quoccabank.com 
 v[1-4].feedier.quoccabank.com
+master.prod.quoccabank.com
 
 
 

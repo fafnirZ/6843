@@ -7,12 +7,15 @@ amass -> passively ran
 
 
 ===active recon====
+sublist3r : osint search engine results
+amass
+gobuster
+subbrute: quieter?
 
+massdns
 
-dnsrecon > quick scan
-pentesttools
-dnsdumpster 
-wayback machine
+massscan for post scanning
+nmap for OS and other info scanning
 
 ===manual searching===
 shodan & cencys
@@ -20,6 +23,10 @@ google & bing
 
 add to a manual list
 
+dnsrecon > quick scan
+pentesttools
+dnsdumpster 
+wayback machine
 
 
 
