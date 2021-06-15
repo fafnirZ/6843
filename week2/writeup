@@ -34,4 +34,37 @@ https://blog.quoccabank.com/wp-admin/about.php
 
 
 
+# files.quoccabank.com
+there seems to be a xss vulnerability in the files
+the cookies stored are in JWT format
+
+attack vectors:
+- xss?
+- credential enumeration
+- jwt
+
+
+enumerated as a valid path
+https://files.quoccabank.com/admin
+brute force this?
+
+
+error code 420 enhance ur clam
+
+brute forcing the /admin pin using a python script and checking content length
+grepping the results pin 1024
+
+
+
+
+
+
+# notes.quoccabank.com
+change cookie to admin@quoccabank.com
+because the jwt was not authenticated with the server.
+
+
+
+
+
 
