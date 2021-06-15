@@ -21,7 +21,6 @@ def request(word, sleep, count_200):
 
     print(f'content len = {len(response.content)} word = {word}' ) 
 
-
     #logic for rate limiting
     if(response.status_code == 200):
         if(count_200 > 30):
@@ -46,6 +45,8 @@ def request(word, sleep, count_200):
 
 sleep = 0
 count_200 = 0
+
+words = words[25075:]
 
 for word in words:
     request(word, sleep, count_200)
