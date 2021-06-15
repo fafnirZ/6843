@@ -1,8 +1,8 @@
-sales.quoccabank.com
+# sales.quoccabank.com
 this problem was solved by inspector in burpsuite, which automatically decoded base64 encoded headers in the http request when i closely examined the requests
 
 
-blog.quoccabank.com
+# blog.quoccabank.com
 
 recon
 
@@ -20,5 +20,18 @@ this flag was obtained by inspecting elements with chrome dev-tools
 flag-2
 upon further inspecting of the flag i realised that the website sources a lot of images from the path blog.quoccabank/wp-includes/ which indicated that there might be a hidden wp-admin/ path that could be explored (especially since this is an access authorisation challenge)
 and obviously i tried the password admin admin and it worked.
+
+
+possible methods of further attacking:
+
+password enumeration 
+path enumeration
+cookie enumeration
+
+https://blog.quoccabank.com/wp-admin/about.php
+
+
+
+
 
 
