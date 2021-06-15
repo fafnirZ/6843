@@ -26,8 +26,10 @@ def create_request(domain, path, sleep, count_200):
             return (0, 0)
         return (sleep, count_200+1)
 
+    
+    #enhance ur clam
+    if(response.status_code == 420):
 
-    if(response.status_code == 429):
         time.sleep(sleep+0.5)
         print(f'throttling for {sleep+0.5}s')
         return (sleep+0.5, 0)
