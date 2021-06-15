@@ -56,6 +56,13 @@ flag-1
 brute forcing the /admin pin using a python script and checking content length
 grepping the results pin 1024
 
+flag-2
+figuring out that the created file would be in
+path
+/document/filename?r={base64encoded username}
+guessing that the filename = flag
+
+/document/flag?r=YWRtaW4=
 
 
 
