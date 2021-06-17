@@ -12,6 +12,10 @@ I brute force enumerated the attatchment_ids in the url, obtaining 12/100 succes
 accessing .hta gave a forbidden page
 but gave me the information that the server is a Apache/2.4.38(debian) server served on port 80
 
+the login page leaks whether or not it is a password or username that doesnt exist, and by brute forcing the main page, found sarah as an account
+
+also brute forced 100 000 passwords for sarah, yielding no result
+
 
 
 flag-1
@@ -20,6 +24,38 @@ this flag was obtained by inspecting elements with chrome dev-tools
 flag-2
 upon further inspecting of the flag i realised that the website sources a lot of images from the path blog.quoccabank/wp-includes/ which indicated that there might be a hidden wp-admin/ path that could be explored (especially since this is an access authorisation challenge)
 and obviously i tried the password admin admin and it worked.
+
+flag2 can also be obtained by using the search query which i believe queries the entire database?
+https://blog.quoccabank.com/?s=flag
+
+
+flag-3
+querying
+by checking queries author=-1 throws an error
+which allows me to use the search bar
+however the search bar is just using this query
+?s=user gives a hidden blog
+COMP6443{hiddenpostflag}
+
+
+
+flag-4
+since I believe that the search bar is querying the entire db and matching
+flag-4 is obtained by searching for query term a
+COMP6443{restructuringisonthecards}
+
+
+found user mq by enumerating all possible 2letter usernames
+brute forced password:
+found madam quoc's account
+mq
+1q2w3e
+
+flag-5 
+COMP6443{Ifoundsarah}
+flag-6
+COMP6443{Ialsofoundtimmy}
+
 
 
 possible methods of further attacking:
