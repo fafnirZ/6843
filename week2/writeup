@@ -100,11 +100,14 @@ guessing that the filename = flag
 
 /document/flag?r=YWRtaW4=
 
-
+flag-3
 found this in app.js
 /covid19/supersecret/lmao/grant_staff_access?username={user}
 gives one flag and a clue to another flag
 
+flag-4
+the flask secret key file is given
+used flask's itsdangerous library to generate the token using the secretkey
 
 
 
