@@ -1,0 +1,22 @@
+possible Time based-otp
+HMAC?
+
+every 5 seconds the second last char of the middle section of cookie increments by 1 ascii value
+
+
+pL98WZmQcXA4844242yOp2J5fJw
+
+
+scoY6cOkOVtBnpLpCq97dtBzri4
+
+
+
+eyJyb2xlIjoiVXNlciIsInVzZXJuYW1lIjoiLmFkbWluIn0
+YMwgIQ -> time based
+flMpXo2NL_UavdsHmLkaKOn9XR8
+Fri, 18 Jun 2021 04:25:05 GMT
+
+
+
+
+c43221f79eceb1fb55540f9c9e33e179
