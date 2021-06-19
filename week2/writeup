@@ -108,6 +108,9 @@ gives one flag and a clue to another flag
 flag-4
 the flask secret key file is given
 used flask's itsdangerous library to generate the token using the secretkey
+uses request.sessions as well
+script in the scripts file
+needed to generate a valid jwt
 
 
 
