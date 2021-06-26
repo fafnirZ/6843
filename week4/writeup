@@ -20,3 +20,26 @@ COMP6443{SQLiIsPowerful}
 
 # Support
 /raw/6fbRN72 -> help page
+
+
+
+
+
+
+
+# Bigapp
+
+flag 1 
+login
+found that login requests had a httponly setcookie header which is base64encoded with this username:
+Admin@admin.com' or 1=1;-- is done in the burp request, not the client side request
+Rae.Salley@miller.com:user
+change cookie to Rae.Salley@miller.com:admin and encode base64
+COMP6443{GET_BY_WITH_BYPASS.Redacted}
+
+
+flag 2
+
+trying payloads
+'union+select+1,2,3,4,5,6,7# 
+

