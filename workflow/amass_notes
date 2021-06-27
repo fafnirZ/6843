@@ -28,6 +28,10 @@ using the CIDRs and ASNs associated with the organisation
 amass enum -d <domain> -active -cidr <1.2.3.4/24,4.3.2.1/24 -asn 12345
 
 
+my typical amass command
+amass enum -src -ip -d <domain> -brute -min-for-recursive 1 | tee amass.out 
+
+
 amass tracking
 amass scans auto stored on computer and if u run same scan again, will track any changes that has taken place
 focus on fresher targets most likely to be vulnerable

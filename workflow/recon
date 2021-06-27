@@ -45,6 +45,18 @@ massscan -> nmap alternative/port scanner but faster
 commands: 
 	-
 
+subbrute -> 
+commands:
+
+gobuster ->
+commands:
+
+sublist3r->
+commands:
+
+altdns ->
+commands:
+
 
 
 ====compile massive list and parse and sort uniquely=====
