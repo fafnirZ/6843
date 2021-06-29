@@ -1,0 +1,9 @@
+
+# bfd
+reading source code from
+https://github.com/ajyoon/systemf/blob/master/examples/http/server.bf
+realise that the http server does not protect from malformed Get requests and opens 
+the file from a relative path to the current directory
+/../../../../../etc/passwd
+spits out the flag
+COMP6443{BRAAAAAINS}
