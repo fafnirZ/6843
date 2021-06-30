@@ -21,6 +21,11 @@ COMP6443{SQLiIsPowerful}
 # Support
 /raw/6fbRN72 -> help page
 
+flag 1
+found COMP6443{PATIENCE_IS_KEY.redacted}
+in 1125:4
+
+
 
 
 

