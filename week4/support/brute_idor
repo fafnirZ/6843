@@ -1,4 +1,6 @@
 #!/bin/sh
+#$1 = id
+#$2 = max_number
 
 split_input() {
 	local body=$(echo $response| sed 's/{.*}//')	
@@ -15,10 +17,10 @@ split_input() {
 }
 
 
-for i in $(seq 1 300)
+for i in $(seq 1 $2)
 do
 	#file=$(echo -n "$i:1"| base58)
-	file=$(echo -n "1780:$i"| base58)
+	file=$(echo -n "$1:$i"| base58)
 	response=$(curl -s --proxy http://127.0.0.1:8080 -k -i "https://support.quoccabank.com/raw/$file" --write-out '%{json}')
 	split_input $response $i
 	sleep 0.2
