@@ -39,6 +39,10 @@ in 9447:1
 qdns.quoccabank.com -> hypothesise that it is a nosql injection
 lead: change in qnd/register for ip address, is reflected when logged in to the account
 
+set ipaddress to direct to custom owned dns
+replace txt record
+
+a' or 1='1union select table from information_schema.tables, last_reset=?, reset_actor=? where email=?-- asdasdf
 
 
 
