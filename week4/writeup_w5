@@ -71,4 +71,9 @@ nc -l -s 0.0.0.0 -p 4444
 
 
 
+#feedifier
+v1
+flag = COMP6443{XE.redacted}
+hosted rss on github pages
+found /flag path in the comments in the main site
 
