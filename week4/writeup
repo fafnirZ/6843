@@ -103,9 +103,10 @@ COMP6443{USE_BY_ORDER.redacted}
 
 flag 6 
 
-email=jack%40jillmail.com'+and+1=0--+
-trying to use sql injections to bypass the duplicate username
-
+Clinton.Murray@miller.com'+or+1='1
+in sign up page
+to create another account with same email as existing
+COMP6443{CREATE_BY_WITH_BYPASS.redacted}
 
 flag 7
 
