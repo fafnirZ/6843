@@ -69,6 +69,14 @@ on linux machine
 nc -l -s 0.0.0.0 -p 4444
 
 
+#gcc
+xss vulns reflected in error page led to arbitrary js execution
+logs are stored in /tmp/php[a-zA-Z0-9]{6}
+can import "php[a-zA-Z0-9]{6}.c" in new file
+
+
+
+
 
 
 #feedifier
@@ -77,3 +85,5 @@ flag = COMP6443{XE.redacted}
 hosted rss on github pages
 found /flag path in the comments in the main site
 
+v2
+also hosted

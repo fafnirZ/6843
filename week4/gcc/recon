@@ -1,0 +1,263 @@
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     https://gcc.quoccabank.com
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Delay:                   150ms
+[+] Wordlist:                /home/fafnir/wordlists/large_php
+[+] Negative Status codes:   404
+[+] Proxy:                   http://localhost:8080
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2021/07/05 17:59:03 Starting gobuster in directory enumeration mode
+===============================================================
+/index.html           (Status: 200) [Size: 2095]
+/.htaccess            (Status: 403) [Size: 146] 
+/robots.txt           (Status: 200) [Size: 34]  
+/.                    (Status: 307) [Size: 37] [--> /]
+/upload.php           (Status: 200) [Size: 120]       
+/.svn                 (Status: 403) [Size: 146]       
+/.html                (Status: 403) [Size: 146]       
+/.cache               (Status: 403) [Size: 146]       
+/.smileys             (Status: 403) [Size: 146]       
+/.hcc.thumbs          (Status: 403) [Size: 146]       
+/.bmp                 (Status: 403) [Size: 146]       
+/.swf                 (Status: 403) [Size: 146]       
+/.pdf                 (Status: 403) [Size: 146]       
+/.ftpquota            (Status: 403) [Size: 146]       
+/.zip                 (Status: 403) [Size: 146]       
+/.cgi                 (Status: 403) [Size: 146]       
+/.inc                 (Status: 403) [Size: 146]       
+/.pgp                 (Status: 403) [Size: 146]       
+/.htpasswd            (Status: 403) [Size: 146]       
+/.asp                 (Status: 403) [Size: 146]       
+/.doc                 (Status: 403) [Size: 146]       
+/.xml                 (Status: 403) [Size: 146]       
+/.mp3                 (Status: 403) [Size: 146]       
+/.pgp.def             (Status: 403) [Size: 146]       
+/.cpanel              (Status: 403) [Size: 146]       
+/.status              (Status: 403) [Size: 146]       
+/.htm                 (Status: 403) [Size: 146]       
+/.settings            (Status: 403) [Size: 146]       
+/.aspx                (Status: 403) [Size: 146]       
+/.txt                 (Status: 403) [Size: 146]       
+/.git                 (Status: 403) [Size: 146]       
+/.trash               (Status: 403) [Size: 146]       
+/.htpasswds           (Status: 403) [Size: 146]       
+/.jsp                 (Status: 403) [Size: 146]       
+/.rar                 (Status: 403) [Size: 146]       
+/.ssh                 (Status: 403) [Size: 146]       
+/flag.php             (Status: 200) [Size: 0]         
+/.stats               (Status: 403) [Size: 146]       
+/.DS_Store            (Status: 403) [Size: 146]       
+/.xls                 (Status: 403) [Size: 146]       
+/.axd                 (Status: 403) [Size: 146]       
+/.admin               (Status: 403) [Size: 146]       
+/.awstats-data        (Status: 403) [Size: 146]       
+/.samples             (Status: 403) [Size: 146]       
+/.mc                  (Status: 403) [Size: 146]       
+/.WML                 (Status: 403) [Size: 146]       
+/.XHTML               (Status: 403) [Size: 146]       
+/.bash_profile        (Status: 403) [Size: 146]       
+/.gz                  (Status: 403) [Size: 146]       
+/.m                   (Status: 403) [Size: 146]       
+/.bashrc              (Status: 403) [Size: 146]       
+/.log                 (Status: 403) [Size: 146]       
+/.search              (Status: 403) [Size: 146]       
+/.mailsubdom          (Status: 403) [Size: 146]       
+/.old                 (Status: 403) [Size: 146]       
+/.template            (Status: 403) [Size: 146]       
+/.wma                 (Status: 403) [Size: 146]       
+/.wmv                 (Status: 403) [Size: 146]       
+/.PocketPC            (Status: 403) [Size: 146]       
+/.bash_logout         (Status: 403) [Size: 146]       
+/.gitignore           (Status: 403) [Size: 146]       
+/.logs                (Status: 403) [Size: 146]       
+/.sqmaildata          (Status: 403) [Size: 146]       
+/.config              (Status: 403) [Size: 146]       
+/.exe                 (Status: 403) [Size: 146]       
+/.thumbs              (Status: 403) [Size: 146]       
+/.bash_history        (Status: 403) [Size: 146]       
+/.element             (Status: 403) [Size: 146]       
+/.test                (Status: 403) [Size: 146]       
+/.htgroup             (Status: 403) [Size: 146]       
+/.fp                  (Status: 403) [Size: 146]       
+/.spamassassin        (Status: 403) [Size: 146]       
+/.cfm                 (Status: 403) [Size: 146]       
+/.cpanel-datastore    (Status: 403) [Size: 146]       
+/.private             (Status: 403) [Size: 146]       
+/.filemanager         (Status: 403) [Size: 146]       
+/.realms              (Status: 403) [Size: 146]       
+/.bak                 (Status: 403) [Size: 146]       
+/.fantasticodata      (Status: 403) [Size: 146]       
+/.cedit               (Status: 403) [Size: 146]       
+/.include             (Status: 403) [Size: 146]       
+/.bin                 (Status: 403) [Size: 146]       
+/.ppt                 (Status: 403) [Size: 146]       
+/.wm                  (Status: 403) [Size: 146]       
+/.mdb                 (Status: 403) [Size: 146]       
+/.xhtml               (Status: 403) [Size: 146]       
+/.Archived            (Status: 403) [Size: 146]       
+/.archive             (Status: 403) [Size: 146]       
+/.data                (Status: 403) [Size: 146]       
+/.history             (Status: 403) [Size: 146]       
+/.avi                 (Status: 403) [Size: 146]       
+/.domains             (Status: 403) [Size: 146]       
+/.htaccess.bak        (Status: 403) [Size: 146]       
+/.metadata            (Status: 403) [Size: 146]       
+/.tmp                 (Status: 403) [Size: 146]       
+/.trellix             (Status: 403) [Size: 146]       
+/.wav                 (Status: 403) [Size: 146]       
+/.viminfo             (Status: 403) [Size: 146]       
+/.cpaddons            (Status: 403) [Size: 146]       
+/.contactemail        (Status: 403) [Size: 146]       
+/.docs                (Status: 403) [Size: 146]       
+/.htuser              (Status: 403) [Size: 146]       
+/.f                   (Status: 403) [Size: 146]       
+/.dev                 (Status: 403) [Size: 146]       
+/.info                (Status: 403) [Size: 146]       
+/.kde                 (Status: 403) [Size: 146]       
+/.lastlogin           (Status: 403) [Size: 146]       
+/.localcache          (Status: 403) [Size: 146]       
+/.mov                 (Status: 403) [Size: 146]       
+/.mysql_history       (Status: 403) [Size: 146]       
+/.system              (Status: 403) [Size: 146]       
+/.sqmailattach        (Status: 403) [Size: 146]       
+/.plop                (Status: 403) [Size: 146]       
+/.project             (Status: 403) [Size: 146]       
+/.sql                 (Status: 403) [Size: 146]       
+/.temp                (Status: 403) [Size: 146]       
+/.templates           (Status: 403) [Size: 146]       
+/.xlsx                (Status: 403) [Size: 146]       
+/.BMP                 (Status: 403) [Size: 146]       
+/.DAV                 (Status: 403) [Size: 146]       
+/.Security            (Status: 403) [Size: 146]       
+/.about               (Status: 403) [Size: 146]       
+/.administration      (Status: 403) [Size: 146]       
+/.adm                 (Status: 403) [Size: 146]       
+/.class               (Status: 403) [Size: 146]       
+/.backup              (Status: 403) [Size: 146]       
+/.cpanel-ducache      (Status: 403) [Size: 146]       
+/.credits             (Status: 403) [Size: 146]       
+/.components          (Status: 403) [Size: 146]       
+/.docx                (Status: 403) [Size: 146]       
+/.dada_files          (Status: 403) [Size: 146]       
+/.ds_store            (Status: 403) [Size: 146]       
+/.emacs               (Status: 403) [Size: 146]       
+/.err                 (Status: 403) [Size: 146]       
+/.eshop               (Status: 403) [Size: 146]       
+/.external            (Status: 403) [Size: 146]       
+/.etc                 (Status: 403) [Size: 146]       
+/.files               (Status: 403) [Size: 146]       
+/.flv                 (Status: 403) [Size: 146]       
+/.htc                 (Status: 403) [Size: 146]       
+/.fm                  (Status: 403) [Size: 146]       
+/.ht                  (Status: 403) [Size: 146]       
+/.mpeg                (Status: 403) [Size: 146]       
+/.mpg                 (Status: 403) [Size: 146]       
+/.img                 (Status: 403) [Size: 146]       
+/.i2s_system          (Status: 403) [Size: 146]       
+/.mreply.log          (Status: 403) [Size: 146]       
+/.mreply.rc           (Status: 403) [Size: 146]       
+/.msg                 (Status: 403) [Size: 146]       
+/.pl                  (Status: 403) [Size: 146]       
+/.ps                  (Status: 403) [Size: 146]       
+/.passwd              (Status: 403) [Size: 146]       
+/.rm                  (Status: 403) [Size: 146]       
+/.psd                 (Status: 403) [Size: 146]       
+/.remote              (Status: 403) [Size: 146]       
+/.shopsuite           (Status: 403) [Size: 146]       
+/.systestperm.html    (Status: 403) [Size: 146]       
+/.tar                 (Status: 403) [Size: 146]       
+/.tools               (Status: 403) [Size: 146]       
+/.trattative          (Status: 403) [Size: 146]       
+/.DateJS.             (Status: 403) [Size: 146]       
+/.FCKEditor           (Status: 403) [Size: 146]       
+/.Trashes             (Status: 403) [Size: 146]       
+/.MirrorSearch        (Status: 403) [Size: 146]       
+/.WWW                 (Status: 403) [Size: 146]       
+/.XAVIOUR             (Status: 403) [Size: 146]       
+/.XAVIOUR_VDOMAIN     (Status: 403) [Size: 146]       
+/.a                   (Status: 403) [Size: 146]       
+/.access.stat         (Status: 403) [Size: 146]       
+/.action              (Status: 403) [Size: 146]       
+/.ar                  (Status: 403) [Size: 146]       
+/.attic               (Status: 403) [Size: 146]       
+/.au                  (Status: 403) [Size: 146]       
+/.adserv              (Status: 403) [Size: 146]       
+/.autorespond         (Status: 403) [Size: 146]       
+/.cap                 (Status: 403) [Size: 146]       
+/.captcha             (Status: 403) [Size: 146]       
+/.cgi-bin             (Status: 403) [Size: 146]       
+/.controls            (Status: 403) [Size: 146]       
+/.cpan                (Status: 403) [Size: 146]       
+/.cpc                 (Status: 403) [Size: 146]       
+/.cs                  (Status: 403) [Size: 146]       
+/.csv                 (Status: 403) [Size: 146]       
+/.do                  (Status: 403) [Size: 146]       
+/.csi                 (Status: 403) [Size: 146]       
+/.dir                 (Status: 403) [Size: 146]       
+/.debug               (Status: 403) [Size: 146]       
+/.edit                (Status: 403) [Size: 146]       
+/.emails              (Status: 403) [Size: 146]       
+/.f4v                 (Status: 403) [Size: 146]       
+/.feed                (Status: 403) [Size: 146]       
+/.finderinfo          (Status: 403) [Size: 146]       
+/.fontconfig          (Status: 403) [Size: 146]       
+/.hqx                 (Status: 403) [Size: 146]       
+/.gnupg               (Status: 403) [Size: 146]       
+/.forward             (Status: 403) [Size: 146]       
+/.fp_folder_info      (Status: 403) [Size: 146]       
+/.framework           (Status: 403) [Size: 146]       
+/.htacess             (Status: 403) [Size: 146]       
+/.htaccess.old        (Status: 403) [Size: 146]       
+/.imanager            (Status: 403) [Size: 146]       
+/.indices             (Status: 403) [Size: 146]       
+/.ini                 (Status: 403) [Size: 146]       
+/.local               (Status: 403) [Size: 146]       
+/.login               (Status: 403) [Size: 146]       
+/.merchant            (Status: 403) [Size: 146]       
+/.master              (Status: 403) [Size: 146]       
+/.magnolia            (Status: 403) [Size: 146]       
+/.masterpages         (Status: 403) [Size: 146]       
+/.mid                 (Status: 403) [Size: 146]       
+/.library             (Status: 403) [Size: 146]       
+/.mozilla             (Status: 403) [Size: 146]       
+/.mp4                 (Status: 403) [Size: 146]       
+/.neomail             (Status: 403) [Size: 146]       
+/.net                 (Status: 403) [Size: 146]       
+/.news                (Status: 403) [Size: 146]       
+/.new                 (Status: 403) [Size: 146]       
+/.new.html            (Status: 403) [Size: 146]       
+/.nsf                 (Status: 403) [Size: 146]       
+/.profile             (Status: 403) [Size: 146]       
+/.onlineForms         (Status: 403) [Size: 146]       
+/.protect             (Status: 403) [Size: 146]       
+/.pptx                (Status: 403) [Size: 146]       
+/.rvskin              (Status: 403) [Size: 146]       
+/.s                   (Status: 403) [Size: 146]       
+/.services            (Status: 403) [Size: 146]       
+/.save                (Status: 403) [Size: 146]       
+/.scripts             (Status: 403) [Size: 146]       
+/.sh                  (Status: 403) [Size: 146]       
+/.stat                (Status: 403) [Size: 146]       
+/.srs                 (Status: 403) [Size: 146]       
+/.sit                 (Status: 403) [Size: 146]       
+/.stats.html          (Status: 403) [Size: 146]       
+/.stats30.html        (Status: 403) [Size: 146]       
+/.tgz                 (Status: 403) [Size: 146]       
+/.thumbnails          (Status: 403) [Size: 146]       
+/.tif                 (Status: 403) [Size: 146]       
+/.tpl                 (Status: 403) [Size: 146]       
+/.upload              (Status: 403) [Size: 146]       
+/.wusage              (Status: 403) [Size: 146]       
+/.weblog              (Status: 403) [Size: 146]       
+/.usermin             (Status: 403) [Size: 146]       
+/.xlogin              (Status: 403) [Size: 146]       
+/.zshrc               (Status: 403) [Size: 146]       
+===============================================================
+2021/07/05 18:17:59 Finished
+===============================================================

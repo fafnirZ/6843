@@ -30,6 +30,7 @@ int main() {
 	
 	while(1) {
 		printf("> ");
+		//takes arguments from stdin
 		n_check = fgets(buf, BUF_SIZE, stdin);
 		sscanf(buf, "%s %s", arg0, arg1);
 		

@@ -9,8 +9,8 @@ int main (int argc, char **argv)
   struct sockaddr_in client;
  
   client.sin_family = AF_INET;
-  client.sin_addr.s_addr = inet_addr("18.118.9.119");
-  client.sin_port = htons(16873);
+  client.sin_addr.s_addr = inet_addr("127.0.0.1");
+  client.sin_port = htons(4444);
 
   scktd = socket(AF_INET,SOCK_STREAM,0);
   connect(scktd,(struct sockaddr *)&client,sizeof(client));
