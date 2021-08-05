@@ -57,7 +57,7 @@ def e():
     resp.headers.add('content-type', 'text/html; charset=UTF-8')
     resp.headers.add('ctfproxy2-enabled', 1)
     return resp
-@app.route('/iframev3', methods=['GET'])
+@app.route('/iframev3.png', methods=['GET'])
 def f():
     resp = make_response(render_template('template.html'))
     print(resp)
@@ -68,8 +68,7 @@ def f():
 
 @app.route('/ssrf', methods=['GET'])
 def g():
-    #file = open(request.args.get('url'), 'r')
-    file = os.popen(request.args.get('cmd'))
+    file = open(request.args.get('url'), 'r')
     resp = make_response(file.read())
     resp.headers.add('content-type', 'text/html; charset=UTF-8')
     resp.headers.add('ctfproxy2-enabled', '1')   
