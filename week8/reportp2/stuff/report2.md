@@ -1,18 +1,18 @@
 ### Application/json; charset=utf-8
 
-When sending a CORs request with content-type set as application/json, a preflight request **was** sent, 
+When sending a CORs request with content-type set as application/json, a preflight request **was** sent.
 
 The request and response of the preflight request is shown below:
 
-![Screen Shot 2021-08-07 at 4.35.36 pm](./report/1.png)
+![Screen Shot 2021-08-07 at 4.35.36 pm](./images/1.png)
 
 
 
-![Screen Shot 2021-08-07 at 4.36.38 pm](./report/2.png)
+![Screen Shot 2021-08-07 at 4.36.38 pm](./images/2.png)
 
 #### CORs Error
 
-![Screen Shot 2021-08-07 at 4.38.07 pm](./report/3.png)
+![Screen Shot 2021-08-07 at 4.38.07 pm](./images/3.png)
 
 
 
@@ -26,47 +26,47 @@ For Requests with content-type: text/plain, and methods set as OPTIONS, DELETE a
 
 ##### GET 
 
-##### ![Screen Shot 2021-08-07 at 4.41.26 pm](./report/4.png)
+##### ![Screen Shot 2021-08-07 at 4.41.26 pm](./images/4.png)
 
-![Screen Shot 2021-08-07 at 4.42.05 pm](./report/5.png)
+![Screen Shot 2021-08-07 at 4.42.05 pm](./images/5.png)
 
 
 
 ##### POST
 
-![Screen Shot 2021-08-07 at 4.42.53 pm](./report/6.png)
+![Screen Shot 2021-08-07 at 4.42.53 pm](./images/6.png)
 
-![Screen Shot 2021-08-07 at 4.43.14 pm](./report/7.png)
+![Screen Shot 2021-08-07 at 4.43.14 pm](./images/7.png)
 
 
 
 ##### OPTIONS
 
-![Screen Shot 2021-08-07 at 4.44.39 pm](/Users/jackyxie/Documents/term2/6843/week8/reportp2/report/8.png)
+![Screen Shot 2021-08-07 at 4.44.39 pm](./images/8.png)
 
-![Screen Shot 2021-08-07 at 4.46.25 pm](./report/9.png)
+![Screen Shot 2021-08-07 at 4.46.25 pm](./images/9.png)
 
-##### ![Screen Shot 2021-08-07 at 4.47.06 pm](./report/10.png)
+##### ![Screen Shot 2021-08-07 at 4.47.06 pm](./images/10.png)
 
 
 
 ##### DELETE
 
-##### ![Screen Shot 2021-08-07 at 4.47.53 pm](./report/11.png)
+##### ![Screen Shot 2021-08-07 at 4.47.53 pm](./images/11.png)
 
-![Screen Shot 2021-08-07 at 4.48.34 pm](./report/12.png)
+![Screen Shot 2021-08-07 at 4.48.34 pm](./images/12.png)
 
-##### ![Screen Shot 2021-08-07 at 4.48.54 pm](./report/13.png)
+##### ![Screen Shot 2021-08-07 at 4.48.54 pm](./images/13.png)
 
 
 
 ##### PUT
 
-![Screen Shot 2021-08-07 at 4.49.58 pm](./report/14.png)
+![Screen Shot 2021-08-07 at 4.49.58 pm](./images/14.png)
 
-![Screen Shot 2021-08-07 at 4.50.28 pm](./report/15.png)
+![Screen Shot 2021-08-07 at 4.50.28 pm](./images/15.png)
 
-![Screen Shot 2021-08-07 at 4.50.47 pm](./report/16.png)
+![Screen Shot 2021-08-07 at 4.50.47 pm](./images/16.png)
 
 
 
@@ -100,10 +100,13 @@ Wildcard parameters for Access-control-allow-origin headers are generally allowe
 
 ## HTML Form - INCOMPLETE
 
-`const form = document.createElement('form');
+`const dummy = document.createElement('iframe');
+dummy.id='dummyframe';
+const form = document.createElement('form');
 const url = 'https://server.test-cors/server?id=817934&&enable=true&status=200&credentials=false';
 form.action=url;
-form.method='POST';
+form.method='POST'; 
+form.target='dummyframe';
 const inputt = document.createElement('input');
 inputt.type='text';
 inputt.id='john';
@@ -112,7 +115,10 @@ subm.type='submit';
 subm.value='Submit';
 form.appendChild(inputt);
 form.appendChild(subm);
+document.body.appendChild(dummy);
 document.body.appendChild(form);`
+
+redirects and does not send a cors request,  I tried to have the form target an iframe instead so it doesnt redirect, but it still does not send a cors request that we can intercept
 
 
 
@@ -120,7 +126,7 @@ document.body.appendChild(form);`
 
 Initially when sending a GET request with content-type: text/plain, and without the 'with credentials' as well as 'allow credentials'
 
-![Screen Shot 2021-08-07 at 5.19.22 pm](/Users/jackyxie/Documents/term2/6843/week8/reportp2/report/19.png)
+![Screen Shot 2021-08-07 at 5.19.22 pm](/Users/jackyxie/Documents/term2/6843/week8/imagesp2/report/19.png)
 
 there was:
 
@@ -128,19 +134,24 @@ there was:
 - It did NOT contain the 'my-dummy-cookie'
 - There was no Access-control-allow-credentials header in the server response.
 
-![Screen Shot 2021-08-07 at 5.15.03 pm](./report/17.png)
+![Screen Shot 2021-08-07 at 5.15.03 pm](./images/17.png)
 
 
 
 However if we set the server response to contains the Access-control-allow-credentials header, then the cookies are sent.
 
-![Screen Shot 2021-08-07 at 5.16.57 pm](./report/18.png)
+![Screen Shot 2021-08-07 at 5.16.57 pm](./images/18.png)
+
+Thus it is concluded that, cookies are only sent if the browser sends a request with 'credentials' set as true,  as well as the server responding with a 'access-control-allow-credentials' header also set to true.
 
 
 
-## Response Redirection - INCOMPLETE
+## Response Redirection 
 
+When the response for the preflight response was edited to a 301 moved permanently with location set to google.com, the browser throws a CORs error stating that redirect is not allowed for a preflight request
 
+![Screen Shot 2021-08-07 at 6.00.39 pm](./images/21.png)
 
+![Screen Shot 2021-08-07 at 6.00.21 pm](./images/20.png)
 
-
+![Screen Shot 2021-08-07 at 6.01.18 pm](./images/22.png)
